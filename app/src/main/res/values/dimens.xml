@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="article_section_and_date_font_size">12sp</dimen>
+    <dimen name="article_title_font_size">16sp</dimen>
+
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="padding_default">16dp</dimen>
+</resources>

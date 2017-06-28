@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/background_light"
+              android:baselineAligned="false"
+              android:orientation="vertical"
+              android:padding="@dimen/padding_default">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/article_title_font_size"
+        tools:text="Theresa May rules out participating in TV debates before election"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/section"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/article_section_and_date_font_size"
+            tools:text="Politics"/>
+
+        <TextView
+            android:id="@+id/publicationDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/article_section_and_date_font_size"
+            tools:text="2017-04-18"/>
+
+    </LinearLayout>
+
+</LinearLayout>
