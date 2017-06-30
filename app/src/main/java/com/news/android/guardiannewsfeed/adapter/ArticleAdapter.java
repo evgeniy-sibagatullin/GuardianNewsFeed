@@ -40,7 +40,7 @@ public class ArticleAdapter extends ArrayAdapter<Article> {
             section.setText(article.getSection());
 
             TextView publicationDate = (TextView) listItemView.findViewById(R.id.publicationDate);
-            publicationDate.setText(article.getPublicationDate());
+            publicationDate.setText(article.getPublicationDate().replace("T", " ").replace("Z", ""));
         }
 
         return listItemView;
