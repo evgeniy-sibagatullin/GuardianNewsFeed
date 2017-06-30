@@ -1,14 +1,15 @@
 package com.news.android.guardiannewsfeed.fragment;
 
-import com.news.android.guardiannewsfeed.model.Article;
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class SportFragment extends ArticleFragment {
 
-    @Override
-    protected List<Article> getArticles() {
-        return new ArrayList<>();
+    private static final String TOPIC = "sport";
+    private static final int LOADER_ID = 4;
+
+    protected String getTopic() {
+        return TOPIC;
+    }
+
+    protected int getLoaderId() {
+        return LOADER_ID;
     }
 }
