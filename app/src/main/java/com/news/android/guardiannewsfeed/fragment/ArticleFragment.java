@@ -19,6 +19,8 @@ import com.news.android.guardiannewsfeed.loader.ArticleLoader;
 import com.news.android.guardiannewsfeed.model.Article;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public abstract class ArticleFragment extends Fragment
@@ -65,6 +67,7 @@ public abstract class ArticleFragment extends Fragment
     @Override
     public void onLoadFinished(Loader<List<Article>> loader, List<Article> articles) {
         mArticleAdapter.clear();
+        sortArticlesByDate(articles);
         mArticleAdapter.addAll(articles);
     }
 
@@ -76,4 +79,13 @@ public abstract class ArticleFragment extends Fragment
     protected abstract String getTopic();
 
     protected abstract int getLoaderId();
+
+    private void sortArticlesByDate(List<Article> articles) {
+        Collections.sort(articles, new Comparator<Article>() {
+            @Override
+            public int compare(Article a1, Article a2) {
+                return a2.getPublicationDate().compareTo(a1.getPublicationDate());
+            }
+        });
+    }
 }
